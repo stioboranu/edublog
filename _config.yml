@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Education StartUp
+title: EduStartUp
 subtitle: Let's learn something new
 description: An educative site that teaches you new things
 keywords: Education
 author: Alexandru Stioboranu
-language: en
+language: ro
 timezone: ''
 
 # URL
@@ -94,16 +94,25 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## Feed
-theme: landscape
-
-disqus_shortname: educationstartup
+theme: hueman
 
 feed:
-  type: atom
-  path: atom.xml
-  limit: 20
+    limit: 20
+    order_by: "-date"
+    tag_dir: false
+    category_dir: false
+    atom:
+        enable: true
+        template: themes/templates/atom.ejs
+        output: "atom.xml"
+  
+
+disqus_shortname: educationstartup
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/stioboranu/stioboranu.github.io # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: master
+  message: [message]
